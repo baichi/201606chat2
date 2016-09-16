@@ -1,6 +1,7 @@
 angular.module('chatMod',['ngRoute']).config(['$routeProvider',function($routeProvider){
     $routeProvider.when('/',{//登陆页面
-        templateUrl:'/pages/login.html'
+        templateUrl:'/pages/login.html',
+        controller:'LoginCtrl'
     }).when('/rooms',{//房间列表
         templateUrl:'/pages/rooms.html'
     }).when('/rooms/:id',{//某个房间内的聊天室

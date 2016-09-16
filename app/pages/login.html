@@ -1,1 +1,11 @@
-登录
+<form name="userform" ng-submit="login()" >
+    <div class="form-group">
+        <label for="email">邮箱</label>
+        <input name="email" class="form-control" ng-required="true" id="email" type="email" ng-model="email">
+    </div>
+    <div ng-show="userform.email.$dirty&&userform.email.$invalid" class="help-block">
+        <div ng-show="userform.email.$error.required" class="alert alert-danger">邮箱必填</div>
+        <div  ng-show="userform.email.$error.email" class="alert alert-danger">邮箱格式不合法</div>
+    </div>
+    <button ng-disabled="userform.$pristine || (userform.$dirty&& userform.$invalid)" class="btn btn-primary" type="submit">登录</button>
+</form>
