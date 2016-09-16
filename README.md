@@ -21,13 +21,13 @@ bower init
 }
 ```
 
-##  安装依赖的模块
-1. 前端依赖
+##  2. 安装依赖的模块
+### 2.1. 前端依赖
 ```
 bower install angular angular-route bootstrap --save
 ```
 
-2. 后端依赖
+### 2.2. 后端依赖
 ```
 npm install express socket.io cookie-parser express-session mongoose --save
 ```
